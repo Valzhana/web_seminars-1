@@ -1,0 +1,297 @@
+<?php
+$name = 'Пушистая жопка';
+$profession = 'Профессиональный бездельник';
+$city_country = '"Гуляю где хочу".city';
+$e_mail = 'soft_paws@mail.ru';
+$phone = 'оно нам не нада';
+$age_years =  "6 пушистых лет";
+
+$skills = [
+    [
+        'name' => 'I sleep like a God',
+        'percent' => 90,
+    ],
+    [
+        'name' => 'Love of sweets',
+        'percent' => 100,
+    ],
+    [
+        'name' => 'Posturing',
+        'percent' => 80,
+    ],
+    [
+        'name' => 'Mimicry',
+        'percent' => 80,
+    ],
+    [
+        'name' => 'Lazy thunderstorm of mice',
+        'percent' => 90,
+    ],
+    
+];
+
+$languages = [
+    [
+        'name' => 'Мяу-мяуный',
+        'percent' => 100,
+    ],
+    [
+        'name' => 'Мур-мурный',
+        'percent' => 100,
+    ],
+    [
+        'name' => 'Шипучий',
+        'percent' => 100,
+    ],
+    
+];
+$job_1 = [
+            'job_name' => ['ЗАО "Бездельник", "Отдел важных дел"'],
+            'job_data' => ['2018 - present time'],
+            'job_desc' => ['Бездельник 6 разряда'],
+            'job_about' => ['Здоровый сон. Вкусная еда. Покакал... потом забег сюда-туда.'],
+];
+
+$job_2 = [
+            'job_name' => ['ООО "Полосатый дизайнер"'],
+            'job_data' => ['2017 - 2018'],
+            'job_desc' => ['Дизайнер домашнего интерьера'],
+            'job_about' => ['Дизайнерские правки в интерьере и мебели любимых хозяев в различных стилях (рваные обои, разбитый кактус, мокрые тапки).'],
+];
+
+$job_3 = [
+            'job_name' => ['ООО "Мракобесие"'],
+            'job_data' => ['2016 - 2017'],
+            'job_desc' => ['Хаос-менеджер'],
+            'job_about' => ['Беспорядочные ночные  забеги по всем поверхностям, в том числе вертикальным. Периодическое причинение увечий коженным. Ревизор по соблюдению рекомендаций и правил поведения ночью под одеялом и беспорядочного шевеления конечностями.'],
+];
+
+$education = [
+            'education_name' => ['Мама-папа school', 'ССУЗ "Беспризорник"', 'ВУЗ "Благородных муров"'],
+            'education_data' => ['2017-2016', '2018-2017', '2018 - present time'],
+            'education_degree' => ['Мими котейка', 'Фырфыр хаос', 'Наглая морда'],
+];
+?>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Мяу-мяу резюме</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Jost', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="https://imgfon.ru/Images/Details_img_880px/Animals/glaza-belyy_fon-kotik-morda-polosatyy.webp"
+              style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+              <h2>
+                <?php echo $name ?>
+              </h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $name ?>
+            </p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $profession ?>
+            </p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $city_country ?>
+            </p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $e_mail ?>
+            </p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $phone ?>
+            </p>
+            <p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $age_years ?>
+            </p>
+            <hr>
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <?php for($i = 0; $i < count($skills); $i++):?>
+            <p>
+              <?php echo $skills[$i]['name'];?>
+            </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width:<?php echo $skills[$i]['percent'];?>%">
+                <?php echo $skills[$i]['percent'];?>%
+              </div>^
+            </div>
+            <?php endfor;?>
+            <br>
+
+            <?php for($i = 0; $i < count($languages); $i++):?>
+            <p>
+              <?php echo $languages[$i]['name'];?>
+            </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width:<?php echo $languages[$i]['percent'];?>%">
+                <?php echo $languages[$i]['percent'];?>%
+              </div>^
+            </div>
+            <?php endfor;?>
+            <br>
+          </div>
+        </div>
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $job_1['job_name'][0];?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span
+                class="w3-tag w3-teal w3-round">
+                <?php echo $job_1['job_data'][0]; ?>
+              </span></h6>
+            <p>
+              <?php echo $job_1['job_desc'][0]; ?>
+            </p>
+            <p>
+              <?php echo $job_1['job_about'][0];?>
+            </p>
+            <hr>
+          </div>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $job_2['job_name'][0];?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $job_2['job_data'][0]; ?>
+            </h6>
+            <h6 <p>
+              <?php echo $job_2['job_desc'][0]; ?>
+              </p>
+              <p>
+                <?php echo $job_2['job_about'][0];?>
+              </p>
+            </h6>
+            <hr>
+          </div>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $job_3['job_name'][0];?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $job_3['job_data'][0]; ?>
+            </h6>
+            <p>
+              <?php echo $job_3['job_desc'][0]; ?>
+            </p>
+            <p>
+              <?php echo $job_3['job_about'][0];?>
+            </p><br>
+          </div>
+        </div>
+
+        <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Образование</h2>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $education['education_name'][2];?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][2];?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][2];?>
+            </p>
+            <hr>
+          </div>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $education['education_name'][1];?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][1];?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][1];?>
+            </p>
+            <hr>
+          </div>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $education['education_name'][0];?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][0];?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][0];?>
+            </p>
+            <hr>
+          </div>
+
+
+          <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-teal w3-center w3-margin-top">
+      <p><a href="https://twitter.com/YourAnonCentral"></p>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <!-- End footer -->
+    </footer>
+
+</body>
+
+</html>
